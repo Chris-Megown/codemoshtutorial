@@ -50,8 +50,7 @@ public class MortgageCalculator {
                 * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)
                 / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1));
         NumberFormat currency = NumberFormat.getCurrencyInstance();
-        String monthlyMortgagePayment = currency.format(monthlyMortgageAmount);
-        return monthlyMortgagePayment;
+        return currency.format(monthlyMortgageAmount);
     }
 
     public static void greeting() {
