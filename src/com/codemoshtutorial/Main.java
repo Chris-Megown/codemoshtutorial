@@ -1,14 +1,12 @@
 package com.codemoshtutorial;
 
-import java.text.NumberFormat;
-import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        MortgageCalculator calculator = new MortgageCalculator();
         helloConsole();
+        new FizzBuzz();
     }
 
     public static void helloConsole(){
