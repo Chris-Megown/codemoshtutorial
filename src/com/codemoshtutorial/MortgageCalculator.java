@@ -28,7 +28,7 @@ public class MortgageCalculator {
             annualInterestRate = scanner.nextFloat();
             if (annualInterestRate>12||annualInterestRate<=0)
                 System.out.println("Please enter a value greater than 0 and less than 12");
-        } while (annualInterestRate>1000000||annualInterestRate<1000);
+        } while (annualInterestRate>12||annualInterestRate<=0);
 
         float monthlyInterestRate = (annualInterestRate / PERCENT) / MONTHS_IN_YEAR;
 
