@@ -6,20 +6,39 @@ import java.util.Scanner;
 public class MortgageCalculator {
 
     public MortgageCalculator() {
+        Scanner scanner = new Scanner(System.in);
         final byte MONTHS_IN_YEAR = 12;
         final byte PERCENT = 100;
-        Scanner scanner = new Scanner(System.in);
+        int principal;
+        float annualInterestRate;
+        int periodInYears;
+
         greeting();
         System.out.println("Please provide some information");
-        System.out.print("Principal Amount: ");
-        int principal = scanner.nextInt();
 
-        System.out.print("Annual Interest Rate: ");
-        float annualInterestRate = scanner.nextFloat();
+        do {
+            System.out.print("Principal Amount ($1,000 - $1,000,000: ");
+            principal = scanner.nextInt();
+            if (principal>1000000||principal<1000)
+                System.out.println("Please enter a value between $1,000 - $1,000,000");
+        } while (principal>1000000||principal<1000);
+
+        do {
+            System.out.print("Annual Interest Rate: ");
+            annualInterestRate = scanner.nextFloat();
+            if (annualInterestRate>12||annualInterestRate<=0)
+                System.out.println("Please enter a value greater than 0 and less than 12");
+        } while (annualInterestRate>1000000||annualInterestRate<1000);
+
         float monthlyInterestRate = (annualInterestRate / PERCENT) / MONTHS_IN_YEAR;
 
+        do {
+            System.out.print("Period (Years): ");
+            periodInYears = scanner.nextInt();
+            if (periodInYears>30||periodInYears<1)
+                System.out.println("Please enter a value between 1 - 30");
+        } while (periodInYears>30||periodInYears<1);
         System.out.print("Period (Years): ");
-        int periodInYears = scanner.nextInt();
         int numberOfPayments = periodInYears * MONTHS_IN_YEAR;
 
         String mortgagePayment = calculateMonthlyMortgagePayment(principal, monthlyInterestRate, numberOfPayments);
