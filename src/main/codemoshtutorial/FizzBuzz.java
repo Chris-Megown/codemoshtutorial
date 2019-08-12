@@ -1,4 +1,4 @@
-package com.codemoshtutorial;
+package main.codemoshtutorial;
 
 import java.util.Scanner;
 
