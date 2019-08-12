@@ -1,4 +1,4 @@
-package main.codemoshtutorial;
+package com.codemoshtutorial;
 
 import java.text.NumberFormat;
 import java.util.Scanner;

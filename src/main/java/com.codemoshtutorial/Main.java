@@ -1,4 +1,4 @@
-package main.codemoshtutorial;
+package com.codemoshtutorial;
 
 
 import org.joda.time.LocalTime;
